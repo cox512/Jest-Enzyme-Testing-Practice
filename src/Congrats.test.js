@@ -5,7 +5,8 @@ import Congrats from "./Congrats";
 import { checkProps, findByTestAttr } from "../test/testUtils";
 
 const defaultProps = { success: false };
-//We are passing success props so this is our basic setup. Our props will be an object.
+
+//We are passing props to the setup. If we have no props being passed, we'll use the defaultProps.
 const setup = (props = {}) => {
   const setupProps = { ...defaultProps, ...props };
   return shallow(<Congrats {...setupProps} />);
