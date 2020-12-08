@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 const GuessedWords = (props) => {
   let contents;
-  // console.log(props);
   if (props.guessedWords.length === 0) {
     contents = (
       <span data-test="guess-instructions">Try to guess the secret word</span>
