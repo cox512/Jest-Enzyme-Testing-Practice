@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 // import EnzymeAdapter from "enzyme-adapter-react-16";
-import checkPropTypes from "check-prop-types";
+// import checkPropTypes from "check-prop-types";
 import { findByTestAttr, checkProps } from "../test/testUtils";
 
 import Congrats from "./Congrats";

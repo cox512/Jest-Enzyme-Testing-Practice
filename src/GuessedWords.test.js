@@ -13,9 +13,9 @@ const setup = (props = {}) => {
   return shallow(<GuessedWords {...setupProps} />);
 };
 
-// test("does not throw warning with expected props", () => {
-//   checkProps(GuessedWords, defaultProps);
-// });
+test("does not throw warning with expected props", () => {
+  checkProps(GuessedWords, defaultProps);
+});
 
 describe("if there are NO words guessed", () => {
   let wrapper;
@@ -32,26 +32,26 @@ describe("if there are NO words guessed", () => {
   });
 });
 
-describe("if there ARE  words guessed", () => {
-  let wrapper;
-  const guessedWords = [
-    { guessedWords: "train", letterMatchCount: 3 },
-    { guessedWords: "agile", letterMatchCount: 1 },
-    { guessedWords: "party", letterMatchCount: 5 },
-  ];
-  beforeEach(() => {
-    wrapper = setup({ guessedWords });
-  });
-  test("renders without error", () => {
-    const component = findByTestAttr(wrapper, "component-guessed-words");
-    expect(component.length).toBe(1);
-  });
-  test("renders 'guessed words' section", () => {
-    const guessedWordsNode = findByTestAttr(wrapper, "guessed-words");
-    expect(guessedWordsNode.length).toBe(1);
-  });
-  test("correct number of guessed words", () => {
-    const guessedWordNodes = findByTestAttr(wrapper, "guessed-word");
-    expect(guessedWordNodes.length).toBe(guessedWords.length);
-  });
-});
+// describe("if there ARE  words guessed", () => {
+//   let wrapper;
+//   const guessedWords = [
+//     { guessedWords: "train", letterMatchCount: 3 },
+//     { guessedWords: "agile", letterMatchCount: 1 },
+//     { guessedWords: "party", letterMatchCount: 5 },
+//   ];
+//   beforeEach(() => {
+//     wrapper = setup({ guessedWords });
+//   });
+//   test("renders without error", () => {
+//     const component = findByTestAttr(wrapper, "component-guessed-words");
+//     expect(component.length).toBe(1);
+//   });
+//   test("renders 'guessed words' section", () => {
+//     const guessedWordsNode = findByTestAttr(wrapper, "guessed-words");
+//     expect(guessedWordsNode.length).toBe(1);
+//   });
+//   test("correct number of guessed words", () => {
+//     const guessedWordNodes = findByTestAttr(wrapper, "guessed-word");
+//     expect(guessedWordNodes.length).toBe(guessedWords.length);
+//   });
+// });
